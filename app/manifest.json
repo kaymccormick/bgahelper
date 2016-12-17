@@ -1,0 +1,29 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+      "https://*/*",
+    "*://*/*"
+  ],
+    "browser_action": { "default_icon": { "19": "images/icon-16.png" },
+			"default_title": "BGA Helper"
+		      },
+    "background":
+    { //"page": "http://en.boardgamearena.com/#!gamelobby",
+	"scripts": ["scripts/eventpage.js",
+		    "scripts/chromereload.js",
+		    "scripts/background.js",
+		    "bower_components/socket.io-client/socket.io.js",
+		    "bower_components/jquery/dist/jquery.js",
+		    "bower_components/datatables.net/js/jquery.dataTables.js"],
+	"persistent": false }
+}
